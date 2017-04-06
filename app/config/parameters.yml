@@ -1,0 +1,17 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: project
+    database_user: root
+    database_password: 2Ijk7wch
+    mailer_transport: gmail
+    mailer_host: smtp.gmail.com
+    mailer_user: realisticsounds@gmail.com
+    mailer_password: multi123
+    secret: ThisTokenIsNotSoSecretChangeIt
+#    database_host2: 127.0.0.1
+#    database_port2: null
+#    database_name2: klantB
+#    database_user2: root
+#    database_password2: 2Ijk7wch
