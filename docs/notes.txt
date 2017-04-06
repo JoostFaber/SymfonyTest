@@ -1,0 +1,7 @@
+28-02-17: in custom.min.css de opacity regel gecomment voor class registration_form.
+Er moet nog uitgezocht worden hoe de animatie volgens de live demo toegepast kan worden.
+------------------------------------------------------------------------------------
+19-03-17: owncss.css toegevoegd om de CSS aan te passen in een bootstrap collaped nav. (mobiel nav)
+dit is alleen nodig als je de DIV die voor het gedeelte 'branding/bedijf' bedoeld is weg laat in een nav.
+(zie nav example in bootstrap)
+------------------------------------------------------------------------------------

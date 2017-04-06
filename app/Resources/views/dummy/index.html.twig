@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Dummies list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for dummy in dummies %}
+            <tr>
+                <td><a href="{{ path('dummy_show', { 'id': dummy.id }) }}">{{ dummy.id }}</a></td>
+                <td>{{ dummy.name }}</td>
+                <td>{{ dummy.age }}</td>
+                <td>{{ dummy.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('dummy_show', { 'id': dummy.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('dummy_edit', { 'id': dummy.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('dummy_new') }}">Create a new dummy</a>
+        </li>
+    </ul>
+{% endblock %}

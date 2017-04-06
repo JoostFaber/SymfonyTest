@@ -1,0 +1,16 @@
+{#{% extends 'base.html.twig' %}#}
+<html>
+    <head>
+
+    </head>
+    <body>
+    <h2>Tool Page</h2>
+    <form action="/tool" method="post">
+        <button type="submit" name="action" value="reset"> Reset Database</button>
+        <hr/>
+        <button type="submit" name="action" value="fill"> Fill Database</button>
+        <hr/>
+        <button type="submit" name="action" value="validate"> Validate Schema</button>
+    </form>
+    </body>
+</html>

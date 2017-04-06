@@ -1,0 +1,84 @@
+{% extends '/app/base.html.twig' %}
+
+{% block page_content %}
+    <div class="row">
+
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Default Example <small>Users</small></h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Settings 1</a>
+                            </li>
+                            <li><a href="#">Settings 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="" role="tabpanel" data-example-id="togglable-tabs">
+                    <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Opleidingen en cursussen</a>
+                        </li>
+                        <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Kerntaken</a>
+                        </li>
+                        <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab2" data-toggle="tab" aria-expanded="false">Kwalificaties</a>
+                        </li>
+                        <li role="presentation" class=""><a href="#tab_content4" role="tab" id="werkprocessen-tab" data-toggle="tab" aria-expanded="false">Werkprocessen</a>
+                        </li>
+                        <li role="presentation" class=""><a href="#tab_content5" role="tab" id="compententies-tab" data-toggle="tab" aria-expanded="false">Competenties</a>
+                        </li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
+                            <table class="table table-hover">
+                                <tr>
+                                    <th width="20px;"><a class="fa fa-plus"></a></th>
+                                    <th>Code</th>
+                                    <th>Cursus</th>
+                                    <th>Crebo</th>
+                                </tr>
+                                {#{% for user in users %}#}
+                                    <tr>
+                                        <td><a class="fa fa-edit"></a></td>
+                                        <td>VIG A 2016-2017</td>
+                                        <td>VIG op maat</td>
+                                        <td>25491</td>
+                                    </tr>
+                                {#{% endfor %}#}
+                                {#<tr>#}
+                                    {#<td colspan="4"><a class="fa fa-upload">Bestand Uploaden</a></td>#}
+                                {#</tr>#}
+
+                            </table>
+                            <div class="container">
+                                <button type="button" class="btn btn-default">Bestand Uploaden</button>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
+                            kerntaken
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="tab_content3" aria-labelledby="profile-tab">
+                            kwalificaties
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="tab_content4" aria-labelledby="werkprocessen-tab">
+                            werkprocessen
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="tab_content5" aria-labelledby="compententies-tab">
+                           competenties
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

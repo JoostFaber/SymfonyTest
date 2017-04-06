@@ -1,0 +1,90 @@
+{% extends '/app/base.html.twig' %}
+
+{% block page_content %}
+    {#<h2>View Accounts</h2>#}
+    {#<div class="container">#}
+        {#<a class="fa fa-th fa-2x" aria-hidden="true"></a>#}
+        {#<a class="fa fa-table fa-2x" aria-hidden="true"></a>#}
+    {#</div>#}
+
+<div class="x_panel">
+    <div class="x_title">
+        <h2>Gebruikersaccounts</h2>
+        <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Settings 1</a>
+                    </li>
+                    <li><a href="#">Settings 2</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+    <div class="container">
+        <table id="accounts" class="table table-hover" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+
+                    <th>Gebruikersnaam</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th width="20px;"></th>
+                    <th width="20px;"><a class="fa fa-plus" href="{{ path('viewcreateaccountspage') }}"></a></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.username|e }}</td>
+                    <td>{{ user.email|e }}</td>
+                    <td>{{ user.password|e }}</td>
+                    <td><a class="fa fa-edit" href="{{ path('vieweditaccountspage', { 'id': user.id }) }}"></a></td>
+                    <td><a class="fa fa-trash" href="{{ path('viewremoveaccountspage', { 'id': user.id }) }}"></a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            {#<tfoot>#}
+            {#<tr>#}
+                {#<th width="20px;"><a class="fa fa-plus"></a></th>#}
+                {#<th>Gebruikersnaam</th>#}
+                {#<th>Email</th>#}
+            {#</tr>#}
+            {#</tfoot>#}
+        </table>
+    </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#accounts').DataTable({
+                "language": {
+                    "paginate": {
+                        "previous": "Vorige",
+                        "next" :"Volgende",
+                    },
+                    "lengthMenu": "Toon _MENU_ resultaten per pagina",
+                    "zeroRecords": "Nothing found - sorry",
+                    "info": "Pagina _PAGE_ van _PAGES_",
+                    "infoEmpty": "- Geen gegevens -",
+                    "infoFiltered": "(filtered from _MAX_ total records)",
+                },
+                "columnDefs": [
+                    { "orderable": false, "targets": [3, 4] },
+                ]
+            });
+        } );
+    </script>
+{% endblock %}
