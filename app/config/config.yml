@@ -60,14 +60,14 @@ doctrine:
                 #   2. Uncomment database_path in parameters.yml.dist
                 #   3. Uncomment next line:
                 #path:     "%database_path%"
-            klantb:
-                driver:   pdo_mysql
-                host:     "%database_host2%"
-                port:     "%database_port2%"
-                dbname:   "%database_name2%"
-                user:     "%database_user2%"
-                password: "%database_password2%"
-                charset:  UTF8
+#            klantb:
+#                driver:   pdo_mysql
+#                host:     "%database_host2%"
+#                port:     "%database_port2%"
+#                dbname:   "%database_name2%"
+#                user:     "%database_user2%"
+#                password: "%database_password2%"
+#                charset:  UTF8
                 # if using pdo_sqlite as your database driver:
                 #   1. add the path in parameters.yml
                 #     e.g. database_path: "%kernel.root_dir%/../var/data/data.sqlite"
@@ -85,11 +85,11 @@ doctrine:
                 mappings:
                     AppBundle:  ~
 #                    AcmeStoreBundle: ~
-            klantb:
-                connection: klantb
-                mappings:
-                     AppBundle:  ~
-#                    AcmeCustomerBundle: ~
+#            klantb:
+#                connection: klantb
+#                mappings:
+#                     AppBundle:  ~
+##                    AcmeCustomerBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:
